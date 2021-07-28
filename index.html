@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Covid Tracker</title>
+	<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" type="text/css" href="assets/css/app.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/grid.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+</head>
+<body>
+	<header>
+		<div class="header-wrap">
+			<div class="container">
+				<div class="header-logo">
+					<p>C<i class='bx bxs-virus bx-spin'></i>vid Tracker</p>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="content-wrap">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-12 col-sm-12">
+					<fieldset>
+						<legend>Thế giới</legend>
+						<div class="box-wrap">
+							<div class="row">
+								<div class="col-6 col-md-12 col-sm-12">
+									<div class="box">
+										<div class="row">
+											<div class="col-4 col-md-4 col-sm-4">
+												<div class="box-global">
+													<div class="box-icon">
+														<i class='bx bxs-virus'></i>
+													</div>
+													<div class="box-info">
+														<p class="info-case"></p>
+														<span>Ca nhiễm</span>
+													</div>
+												</div>
+											</div>
+											<div class="col-4 col-md-4 col-sm-4">
+												<div class="box-global">
+													<div class="box-icon">
+														<i class='bx bx-smile'></i>
+													</div>
+													<div class="box-info">
+														<p class="info-recovery"></p>
+														<span>Hồi phục</span>
+													</div>
+												</div>
+											</div>
+											<div class="col-4 col-md-4 col-sm-4">
+												<div class="box-global">
+													<div class="box-icon">
+														<i class='bx bx-sad'></i>
+													</div>
+													<div class="box-info">
+														<p class="info-death"></p>
+														<span>Tử vong</span>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-12 col-sm-12">
+									<div class="box detail-global">
+										<div class="search-wrap">
+											<input type="text" name="" placeholder="Tìm kiếm theo quốc gia..." id="searchInput">
+										</div>
+										<div class="table-global">
+											<table>
+												<thead>
+													<tr>
+														<th class="flag"></th>
+														<th>Quốc gia</th>
+														<th>Số ca nhiễm</th>
+														<th>Hồi phục</th>
+														<th>Tử vong</th>
+													</tr>
+												</thead>
+												<tbody id="table_country_body">
+	
+												</tbody>
+											</table>
+										</div>
+									</div>
+								</div>
+								<div class="col-12 col-md-12 col-sm-12">
+									<span style="text-align: center; font-weight: 600;">Biểu đồ trong 30 ngày</span>
+									<div id="chart-global"></div>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal"></div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+	<script src="assets/js/app.js"></script>
+</body>
+</html>

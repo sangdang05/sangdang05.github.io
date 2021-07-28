@@ -1,0 +1,213 @@
+ :root {
+    --bg-body: #fafbfd;
+    --bg-content: #ffffff;
+    --bg-hover: #f4f4f4;
+    --color-txt: #000000;
+    --nav-height: 70px;
+    --shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--bg-body);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+.container{
+    max-width: 1600px;
+    margin: 0 auto;
+    width: 85%;
+}
+header{
+    height: var(--nav-height);
+    width: 100%;
+    background-color: var(--bg-content);
+    box-shadow: var(--shadow);
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+.header-wrap{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.header-wrap p{
+    font-size: 2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--color-txt);
+    vertical-align: text-top;
+}
+.header-wrap p i{
+    color: #FC0606;
+}
+.content-wrap{
+    padding-top: calc(var(--nav-height)+100px);
+}
+fieldset{
+    border: 1px solid #ddd;
+}
+fieldset legend{
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.box{
+    margin: 15px 0;
+}
+.box-wrap{
+    margin: 10px 15px;
+}
+.box .box-global{
+   background-color: var(--bg-content);
+   box-shadow: var(--shadow);
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   padding: 10px 0;
+   border-radius: 10px;
+}
+.box-global i{
+    font-size: 1.6rem;
+}
+.box-global .box-info{
+    font-size: 1rem;
+    color: var(--color-txt);
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.box-info span{
+    font-size: 0.9rem;
+}
+.box-global .bxs-virus{
+    background-color: rgba(234, 44, 44, 0.6);
+    border-radius: 50%;
+    padding: 5px;
+    color: #FC0606;
+}
+.box-info .info-case, table .case{
+    color: #FC0606;
+}
+.box-global .bx-smile{
+    background-color: rgba(62, 238, 89, 0.4);
+    border-radius: 50%;
+    padding: 5px;
+    color: #10A326;
+}
+.box-info .info-recovery, table .recovery{
+    color: #10A326;
+}
+.box-global .bx-sad{
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    padding: 5px;
+    color: #000;
+}
+.search-wrap{
+    position: relative;
+    width: 35%;
+    margin: 10px 0;
+}
+.search-wrap input{
+    width: 100%;
+    height: 35px;
+    outline: none;
+    border: none;
+    background-color: #ddd;
+    border-radius: 20px;
+}
+.search-wrap::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50px;
+    background-image: url(../images/search-v1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 16px 16px;
+}
+.search-wrap input[type=text]{
+    padding: 0 16px;
+    font-size: 15px;
+}
+.box-info .info-case, table .death{
+    color: #000;
+}
+.table-global{
+    overflow-y: auto;
+    height: 310px;
+    border: 1px solid #ddd;
+}
+.table-global::-webkit-scrollbar{
+    width: 5px;
+}
+.table-global::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.table-global::-webkit-scrollbar-thumb {
+  background: #FC0606;
+}
+.table-global::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.table-global thead th {
+    position: sticky;
+    top: 0;
+    z-index: 9;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 1rem;
+}
+tr:nth-child(even){
+    background-color: #eee;
+}
+tr img {
+    width: 20%;
+}
+td{
+    font-weight: 500;
+}
+th:nth-child(1){
+    width: 15%;
+}
+th{  
+    width: 25%;
+    background-color: #ddd;
+}
+th, td{
+  padding: 10px 0;
+  vertical-align: middle;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba( 255, 255, 255, .8 ) 
+    url('https://i.pinimg.com/originals/71/3a/32/713a3272124cc57ba9e9fb7f59e9ab3b.gif') 
+    50% 50% 
+    no-repeat;
+}
+body.loading .modal {
+    overflow: hidden;   
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}
