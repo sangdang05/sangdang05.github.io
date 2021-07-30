@@ -33,7 +33,9 @@
 				var credential = result.credential;
 				var user = result.user;
 				var accessToken = credential.accessToken;
-				console.log(user.email);
+				console.log(user);
+				userId = user.uid;
+				console.log(userId);
 			}).catch((error) => {
 				var errorCode = error.code;
 				var errorMessage = error.message;
