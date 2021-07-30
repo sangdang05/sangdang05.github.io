@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style type="text/css">
+	.content{
+		width: 100%;
+		text-align: center;
+	}
+	.avartar img{
+		border-radius: 50%;
+	}
+	.name span{
+		font-size: 1.5rem;
+	}
+</style>
+</head>
+<body>
+	<div class="form-group text-center">
+		<button id="btnFacebook" type="button" onclick="SignIn()"> 
+			<span class="fa fa-facebook">Login with Facebook</span>
+		</button>
+	</div>
+	<div class="content">
+		<div class="avartar" >
+			<img src="">
+		</div>
+		<div class="name">
+			<span class="display-name">abs</span>
+			<span class="email"></span>
+		</div>
+		<button onclick="LogOut()">
+			<span>Đăng xuất</span>
+		</button>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+	<script type="text/javascript">
+		var config = {
+			apiKey: "AIzaSyAmauNp2Szkf5hJe6Rt2WWEWAMO7Q-AgjA",
+			authDomain: "vascara-6d8d3.firebaseapp.com",
+			projectId: "vascara-6d8d3",
+			storageBucket: "vascara-6d8d3.appspot.com",
+			messagingSenderId: "822430790739",
+			appId: "1:822430790739:web:da5ea825697c25ef1e42a6",
+			measurementId: "G-H2XSP2YPD7"
+		};
+		firebase.initializeApp(config);
+
+		SignIn = ()=>{
+			console.log('aa');
+			var provider = new firebase.auth.FacebookAuthProvider();
+			firebase.auth().signInWithPopup(provider).then((result) => {
+				var credential = result.credential;
+				var user = result.user;
+				var accessToken = credential.accessToken;
+				var avatar = document.querySelector('.avartar img');
+				avatar.src= user.photoURL;
+				var name = document.querySelector('.name .display-name');
+				name.innerHTML = user.displayName;
+				var email = document.querySelector('.name .email');
+				name.innerHTML = user.email;
+
+			}).catch((error) => {
+				var errorCode = error.code;
+				var errorMessage = error.message;
+				var email = error.email;
+				var credential = error.credential;
+			})
+		}
+		LogOut = ()=>{
+			firebase.auth().signOut().then(() => {
+				alert('Đăng xuất thành công')
+			}).catch((error) => {
+				alert('Đăng xuất thất bại')
+			});
+		}
+	</script>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
