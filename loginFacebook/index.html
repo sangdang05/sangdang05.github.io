@@ -20,7 +20,7 @@
 <body>
 	<div class="form-group text-center">
 		<button id="btnFacebook" type="button" onclick="SignIn()"> 
-			<span class="fa fa-facebook">Login with Facebook</span>
+			<span>Login with Facebook</span>
 		</button>
 	</div>
 	<div class="content">
@@ -31,6 +31,9 @@
 			<span class="display-name"></span>
 			<span class="email"></span>
 		</div>
+		<button id="btnFacebook" type="button" onclick="SignOut()"> 
+			<span class="fa fa-facebook">LogOut</span>
+		</button>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
@@ -60,7 +63,7 @@
 				name.innerHTML = user.displayName;
 				var email = document.querySelector('.name .email');
 				name.innerHTML = user.email;
-				var form = document.querySelector('form-group');
+				var form = document.querySelector('.form-group');
 				form.style.display = 'none';
 			}).catch((error) => {
 				var errorCode = error.code;
@@ -68,6 +71,13 @@
 				var email = error.email;
 				var credential = error.credential;
 			})
+		}
+		SignOut = ()=>{
+			firebase.auth().signOut().then(() => {
+			  // Sign-out successful.
+			}).catch((error) => {
+			  // An error happened.
+			});
 		}
 	</script>
 	<script type="text/javascript" src="app.js"></script>
