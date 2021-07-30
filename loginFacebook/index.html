@@ -31,9 +31,6 @@
 			<span class="display-name">abs</span>
 			<span class="email"></span>
 		</div>
-		<button onclick="LogOut()">
-			<span>Đăng xuất</span>
-		</button>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
@@ -63,20 +60,14 @@
 				name.innerHTML = user.displayName;
 				var email = document.querySelector('.name .email');
 				name.innerHTML = user.email;
-
+				var form = document.querySelector('form-group');
+				form.style.display = 'none';
 			}).catch((error) => {
 				var errorCode = error.code;
 				var errorMessage = error.message;
 				var email = error.email;
 				var credential = error.credential;
 			})
-		}
-		LogOut = ()=>{
-			firebase.auth().signOut().then(() => {
-				alert('Đăng xuất thành công')
-			}).catch((error) => {
-				alert('Đăng xuất thất bại')
-			});
 		}
 	</script>
 	<script type="text/javascript" src="app.js"></script>
