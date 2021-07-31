@@ -62,6 +62,7 @@
 				name.innerHTML = user.email;
 				var form = document.querySelector('.form-group');
 				form.style.display = 'none';
+				console.log(user);
 			}).catch((error) => {
 				var errorCode = error.code;
 				var errorMessage = error.message;
