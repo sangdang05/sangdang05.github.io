@@ -48,7 +48,7 @@
 			timeline = b[i].time.replace(/[\[\]']+/g,'');
 			textline = b[i].lyrics;
 			const [minutes, seconds] = timeline.split(':');
-			const totalSeconds = minutes * 60 + seconds;
+			const totalSeconds = (+minutes) * 60 + (+seconds);
 			syncData.push({'start': totalSeconds, 'text': textline})
 			const spanin = `<span class="abc">${showlyrics}</span>`;
 			//showlrc.insertAdjacentHTML("beforeend",spanin);
