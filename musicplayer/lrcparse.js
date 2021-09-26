@@ -60,11 +60,14 @@
 					showlrc.innerHTML = item.text;
 			})
 		});
-		setProgress = ()=>{
-			const width = e.offsetX;
-			const progress = e.currentTarget;
-			let { duration } = audio;
-		}
+		audio.addEventListener('ended', () =>{
+			syncData.forEach((item) => {
+				if (audio.currentTime > item.start) 
+				{
+					showlrc.innerHTML = "";
+				}
+			})
+		});
 	});
 })(jQuery);
 
