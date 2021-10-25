@@ -1,0 +1,153 @@
+.banner{
+	margin-top: $header-height;
+	&-main{
+		height: 580px;
+	}
+	&-wrap{
+		height: 100%;
+	}
+	&-item{
+		position: relative;
+		img{
+			height: 100%;
+			-o-object-fit: cover;
+			object-fit: cover;
+			-o-object-position: 0 -15px !important;
+			object-position: 0 -15px !important;
+			opacity: 0.9;
+		}
+	}
+	&-info{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		color: $white-color;
+		padding: 30px 35px 40px 20px;
+		background: -o-linear-gradient(top,rgba(0,0,0,0) 0,#010101 100%);
+		background: -webkit-gradient(linear,left top, left bottom,color-stop(0, rgba(0,0,0,0)),to(#010101));
+		background: linear-gradient(-180deg,rgba(0,0,0,0) 0,#010101 100%);
+		.info-wrap{
+			width: 75%;
+			.name{
+				word-break: break-all;
+				font-weight: 600;
+			}
+			.name-es{
+				color: $gray-color;
+				font-weight: 600;
+				display: block;
+				margin: 7px 0px;
+			}
+			.intro{
+				@include textclamp(1);
+			}
+		}
+	}
+	.btn{
+		position: absolute;
+		right: 40px;
+		bottom: 35px;
+		font-size: 15px;
+		line-height: 1.3;
+		background: $orange-color;
+		border-radius: 5px;
+		overflow: hidden;
+		color: $white-color;
+		padding: 10px 15px;
+		@include transition(0.2s);
+		cursor: pointer;
+		&:hover{
+			background-color: transparent;
+			border: 1px solid $white-color;
+		}
+		ion-icon{
+			vertical-align: bottom;
+		}
+	}
+	%controll{
+		position: absolute;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		color: $white-color;
+		background-color: rgba(0,0,0,0.5);
+		line-height: 0.8;
+		font-size: 35px;
+		padding: 15px 0;
+		z-index: 10;
+		cursor: pointer;
+	}
+	.btn-controll{
+		.btn-prev{
+			@extend %controll;
+			left: 0;
+		}
+		.btn-next{
+			@extend %controll;
+			right: 0;
+		}
+	}
+	.swiper-pagination-bullet{
+		background-color: #fff;
+	}
+}
+@include maxWidth(992px){
+	.banner{
+		&-main{
+			height: 100%;
+		}
+		&-item{
+			img{
+				-o-object-position: unset !important;
+				object-position: unset !important;
+			}
+		}
+		&-info{
+			.info-wrap{
+				width: 100%;
+			}
+		}
+		.btn{
+			display: none;
+		}
+	}
+}
+@include maxWidth(576px){
+	.banner{
+		&-info{
+			padding-bottom: 25px;
+			.info-wrap{
+				.name{
+					@include textclamp(1);
+				}
+				.name-es{
+					@include textclamp(1);
+				}
+				.intro{
+					display: none;
+				}
+			}
+		}
+		.btn-controll{
+			display: none;
+		}
+	}
+}
+@include about(577px, 768px){
+	.banner{
+		.btn-controll{
+			%controll-md{
+				font-size: 30px;
+				padding: 10px 0;
+			}
+			.btn-prev{
+				@extend %controll-md;
+			}
+			.btn-next{
+				@extend %controll-md;
+			}
+		}
+	}
+}
