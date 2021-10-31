@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+	<link rel="icon" type="text/css" href="./assets/img/logo/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="./assets/css/app.css">
+	<title>Xem phim Online miễn phí chất lượng cao</title>
+</head>
+<body class="scroll">
+	<div id="app">
+		<!----------header--------------->
+		<div class="overlay"></div>
+		<header class="header">
+			<div class="header-main">
+				<div class="hamburger-mobile only-mobile">
+					<i class='bx bx-menu-alt-left'></i>
+				</div>
+				<div class="header-main-left">
+					<a href="#" class="logo">
+						<img src="./assets/img/logo/logo.png" alt="">
+					</a>
+				</div>
+				<div class="header-main-navbar scroll">
+					<div class="close-menu only-mobile icon-close">
+						<ion-icon name="close-outline" class="icon"></ion-icon>
+					</div>
+					<ul class="menu">
+						<li class="menu-item">
+							<a href="#">
+								<ion-icon name="home-outline" class="icon-menu"></ion-icon>
+								Trang chủ
+							</a>
+						</li>
+						<li class="menu-item menu-item--has-child">
+							<a href="#" data-toggle="sub-menu">
+								<i class='bx bx-category icon-menu' ></i>
+								Thể loại
+								<ion-icon name="chevron-down-outline" class="dropdown"></ion-icon>
+							</a>
+							<ul class="sub-menu">
+								<li class="menu-item"><a href="#">Thể loại 10000000000000000011234</a></li>
+								<li class="menu-item"><a href="#">Thể loại 2</a></li>
+								<li class="menu-item"><a href="#">Thể loại 3</a></li>
+								<li class="menu-item"><a href="#">Thể loại 4</a></li>
+								<li class="menu-item"><a href="#">Thể loại 5</a></li>
+								<li class="menu-item"><a href="#">Thể loại 6</a></li>
+								<li class="menu-item"><a href="#">Thể loại 7</a></li>
+								<li class="menu-item"><a href="#">Thể loại 8</a></li>
+							</ul>
+						</li>
+						<li class="menu-item menu-item--has-child">
+							<a href="#" data-toggle="sub-menu">
+								<ion-icon name="earth-outline" class="icon-menu"></ion-icon>
+								Quốc gia
+								<ion-icon name="chevron-down-outline" class="dropdown"></ion-icon>
+							</a>
+							<ul class="sub-menu">
+								<li class="menu-item"><a href="#">Thể loại 100000000000000000</a></li>
+								<li class="menu-item"><a href="#">Thể loại 2</a></li>
+								<li class="menu-item"><a href="#">Thể loại 3</a></li>
+								<li class="menu-item"><a href="#">Thể loại 4</a></li>
+								<li class="menu-item"><a href="#">Thể loại 5</a></li>
+								<li class="menu-item"><a href="#">Thể loại 6</a></li>
+								<li class="menu-item"><a href="#">Thể loại 7</a></li>
+								<li class="menu-item"><a href="#">Thể loại 8</a></li>
+							</ul>
+						</li>
+						<li class="menu-item">
+							<a href="#">
+								<i class='bx bx-list-ul icon-menu'></i>
+								Phim bộ
+							</a>
+						</li>
+						<li class="menu-item">
+							<a href="#">
+								<i class='bx bx-film icon-menu'></i>
+								Phim lẻ
+							</a>
+						</li>
+						<li class="menu-item">
+							<a href="#">
+								<i class='bx bx-camera-movie icon-menu' ></i>
+								Phim chiếu rạp
+							</a>
+						</li>
+					</ul>
+					<div class="header-search">
+						<div class="close-search only-mobile icon-close">
+							<ion-icon name="close-outline" class="icon"></ion-icon>
+						</div>
+						<form action="#" class="search-form">
+							<input type="text" class="search-input" placeholder="Tìm kiếm" />
+							<ion-icon name="search-outline" class="icon-search"></ion-icon>
+						</form>
+					</div>
+				</div>
+				<div class="header-main-right">
+					<ion-icon name="search-outline" class="icon-search icon-search-tb"></ion-icon>
+					<div class="avatar-user">
+						<img src="./assets/img/user.png" class="no-avatar">
+						<!--<img src="./assets/img/user-login.jpg" class="yes-avatar">-->
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-------Login form--------->
+		<div class="account-form">
+			<div class="account-form-wrap">
+				<i class='bx bx-x account-close icon-close'></i>
+				<div class="account-form-header">
+					<div class="account-info">
+						<span class="info-name">
+							Chào Admin
+						</span>
+						<div class="info-avatar">
+							<!--<div class="no-avatar"></div>-->
+							<img src="./assets/img/avatar/avt-cute-9.jpg" alt="avatar">
+						</div>
+					</div>
+					<div class="account-select">
+						<span class="tab-link active" data-tab="login">Đăng nhập</span>
+						<span class="tab-link" data-tab="register">Đăng ký</span>
+					</div>
+				</div>
+				<div class="account-form-main">
+					<!----------form login---------------->
+					<div id="login" class="form-account active">
+						<form action="#">
+							<label for="name">Tên đăng nhập</label>
+							<div class="form-input">
+								<i class='bx bxs-user icon'></i>
+								<input type="text" name="name">
+							</div>
+							<label for="pass">Mật khẩu</label>
+							<div class="form-input">
+								<i class='bx bxs-lock icon' ></i>
+								<input type="password" name="pass">
+							</div>
+							<div class="remember-pass">
+								<div class="remember-wrap">
+									<input type="checkbox" name="rememberPass" checked="true">
+									<label for="rememberPass">Nhớ mật khẩu</label>
+								</div>
+								<a href="#">Quên mật khẩu</a>
+							</div>
+							<button class="btn btn-login">Đăng nhập</button>
+						</form>
+						<div class="account-social">
+							<button class="btn btn-facebook">
+								<i class='bx bxl-facebook'></i>
+								<span>Đăng nhập với Facebook</span>
+							</button>
+							<button class="btn btn-google">
+								<i class='bx bxl-google'></i>
+								<span>Đăng nhập với Google</span>
+							</button>
+						</div>
+					</div>
+					<!----------form resister------------->
+					<div id="register" class="form-account">
+						<form action="#" style="border-bottom: none;">
+							<label for="name">Tên đăng nhập</label>
+							<div class="form-input">
+								<i class='bx bxs-user icon'></i>
+								<input type="text" name="name" autocomplete="off">
+							</div>
+							<label for="pass">Mật khẩu</label>
+							<div class="form-input">
+								<i class='bx bxs-lock icon' ></i>
+								<input type="password" name="pass" autocomplete="off">
+							</div>
+							<label for="pass">Nhập lại mật khẩu</label>
+							<div class="form-input">
+								<i class='bx bxs-lock icon' ></i>
+								<input type="password" name="repass" autocomplete="off">
+							</div>
+							<label for="pass">Tên hiển thị</label>
+							<div class="form-input">
+								<i class='bx bxs-chat icon' ></i>
+								<input type="text" name="nameshow" autocomplete="off">
+							</div>
+							<label for="pass">Email</label>
+							<div class="form-input">
+								<i class='bx bx-mail-send icon'></i>
+								<input type="email" name="email" autocomplete="off">
+							</div>
+							<button class="btn btn-register">Đăng ký</button>
+						</form>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!----------banner--------------->
+		<div class="banner">
+			<div class="banner-main">
+				<div class="banner-wrap swiper">
+					<div class="banner-list swiper-wrapper">
+						<div class="banner-item swiper-slide">
+							<img src="./assets/img/banner/squid-game.jpeg" alt="" class="img">
+							<div class="opacity"></div>
+							<div class="banner-info">
+								<div class="banner-info-wrap">
+									<a class="name">
+										Trò chơi con mực
+									</a>
+									<div class="properties wrap-item topdown delay-4">
+										<span class="quality">Full HD</span>
+										<span class="time">
+											<i class='bx bx-time'></i>
+											9/9 tập
+										</span>
+										<span class="level">16+</span>
+										<span class="year">
+											<i class='bx bx-calendar' ></i>
+											2021
+										</span>
+									</div>
+									<div class="intro-text wrap-item topdown delay-6">
+										<p>Trò Chơi Con Mực - Squid Game xoay quanh câu chuyện về hàng trăm người đang đối mặt với việc thất nghiệp, không có tiền để sinh sống. Vì thế bọn họ đều nhận được một lời mời tham gia vào trò chơi con mực dành cho trẻ em, nếu chiến thắng sẽ được một số tiền hàng tỷ won. Tất cả những người tham gia đều được đưa đến một nơi xa lạ và bị nhốt tại đó và người dành chiến thắng sẽ nhận được số tiền ấy. Thế nhưng, họn họ tưởng chừng chỉ là một trò chơi nhỏ nên tấp nập tham gia nhưng không hề biết rằng trò chơi phải trả giá bằng cả mạng sống của mình.</p>
+									</div>
+									<div class="btn-banner topdown delay-8">
+										<a href="#" class="btn-mobile btn-tl-mb">
+											<ion-icon name="videocam-sharp"></ion-icon>
+											<span>Trailer</span>
+										</a>
+										<a href="#" class="btn-film btn">
+											<ion-icon name="play-sharp"></ion-icon>
+											<span>Xem phim</span>
+										</a>
+										<div class="btn btn-info" >
+											<ion-icon name="information-outline"></ion-icon>
+											<span>Chi tiết</span>
+										</div>
+										<a href="#" class="btn-mobile btn-info-mb">
+											<ion-icon name="information-outline"></ion-icon>
+											<span>Chi tiết</span>
+										</a>
+									</div>
+									<div class="btn-trailer topdown delay-8">
+										<a href="#">
+											<ion-icon name="play-circle-outline"></ion-icon>
+											<span>Trailer</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="banner-item swiper-slide">
+							<img src="./assets/img/banner/wonder-woman.png" alt="" class="img">
+							<div class="opacity"></div>
+							<div class="banner-info">
+								<div class="banner-info-wrap">
+									<a class="name">
+										Nữ thần chiến binh
+									</a>
+									<div class="properties wrap-item topdown delay-4">
+										<span class="quality">Full HD</span>
+										<span class="time">
+											<i class='bx bx-time'></i>
+											134 phút
+										</span>
+										<span class="level">16+</span>
+										<span class="year">
+											<i class='bx bx-calendar' ></i>
+											2021
+										</span>
+									</div>
+									<div class="intro-text wrap-item topdown delay-6">
+										<p>Nữ Thần Chiến Binh sẽ lấy bối cảnh năm 1984, khi Mỹ và Liên Xô đối đầu trong thời kỳ Chiến tranh Lạnh. Đặc biệt cũng hé lộ sự trở lại bí ẩn của Steve Trevor – người đã hy sinh anh dũng nhằm ngăn chặn kế hoạch phát tán chất độc của Đức quốc xã, đồng thời đương đầu với hai kẻ thù mới là Max Lord và The Cheetah</p>
+									</div>
+									<div class="btn-banner topdown delay-8">
+										<a href="#" class="btn-mobile btn-tl-mb">
+											<ion-icon name="videocam-sharp"></ion-icon>
+											<span>Trailer</span>
+										</a>
+										<a href="#" class="btn-film btn">
+											<ion-icon name="play-sharp"></ion-icon>
+											<span>Xem phim</span>
+										</a>
+										<div class="btn btn-info" >
+											<ion-icon name="information-outline"></ion-icon>
+											<span>Chi tiết</span>
+										</div>
+										<a href="#" class="btn-mobile btn-info-mb">
+											<ion-icon name="information-outline"></ion-icon>
+											<span>Chi tiết</span>
+										</a>
+									</div>
+									<div class="btn-trailer topdown delay-8">
+										<a href="#">
+											<ion-icon name="play-circle-outline"></ion-icon>
+											<span>Trailer</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="banner-item swiper-slide">
+							<img src="./assets/img/banner/shang-chi.jpg" alt="" class="img">
+							<div class="opacity"></div>
+							<div class="banner-info">
+								<div class="banner-info-wrap">
+									<a class="name">
+										Shanchi và huyền thoại thập nhẫn 
+									</a>
+									<div class="properties wrap-item topdown delay-4">
+										<span class="quality">HD</span>
+										<span class="time">
+											<i class='bx bx-time'></i>
+											132 phút
+										</span>
+										<span class="level">16+</span>
+										<span class="year">
+											<i class='bx bx-calendar' ></i>
+											2021
+										</span>
+									</div>
+									<div class="intro-text wrap-item topdown delay-6">
+										<p>Shang-Chi và huyền thoại Thập Luân  là bộ phim thuộc giai đoạn 4 của Vũ trụ điện ảnh Marvel. Nhân vật này được biết đến như một bậc thầy Kung Fu, tinh thông võ thuật. Sức mạnh của Shang-Chi đến từ hàng ngàn giờ luyện tập miệt mài và sự kỷ luật cao độ với bản thân. Siêu anh hùng võ thuật này được chính bố dạy dỗ để trở thành một sát thủ chuyên nghiệp và kế thừa tập đoàn tội ác của ông.</p>
+									</div>
+									<div class="btn-banner topdown delay-8">
+										<a href="#" class="btn-mobile btn-tl-mb">
+											<ion-icon name="videocam-sharp"></ion-icon>
+											<span>Trailer</span>
+										</a>
+										<a href="#" class="btn-film btn">
+											<ion-icon name="play-sharp"></ion-icon>
+											<span>Xem phim</span>
+										</a>
+										<div class="btn btn-info" >
+											<ion-icon name="information-outline"></ion-icon>
+											<span>Chi tiết</span>
+										</div>
+										<a href="#" class="btn-mobile btn-info-mb">
+											<ion-icon name="information-outline"></ion-icon>
+											<span>Chi tiết</span>
+										</a>
+									</div>
+									<div class="btn-trailer topdown delay-8">
+										<a href="#">
+											<ion-icon name="play-circle-outline"></ion-icon>
+											<span>Trailer</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="banner-item swiper-slide">
+							<img src="./assets/img/banner/endgame.jpg" alt="" class="img">
+							<div class="opacity"></div>
+							<div class="banner-info">
+								<div class="banner-info-wrap">
+									<a class="name">
+										Avengers: Hồi kết
+									</a>
+									<div class="properties wrap-item topdown delay-4">
+										<span class="quality">Full HD</span>
+										<span class="time">
+											<i class='bx bx-time'></i>
+											120 phút
+										</span>
+										<span class="level">16+</span>
+										<span class="year">
+											<i class='bx bx-calendar' ></i>
+											2019
+										</span>
+									</div>
+									<div class="intro-text wrap-item topdown delay-6">
+										<p>Sau kết thúc mở của avenger infinity war thì mới đây phần tiếp theo đõ là Avengers: Endgame tạm dịch là Avengers: Tàn cuộc đã xuất hiện mẩu giới thiệu phim ngắn đẫm nước mắt, chắc chắn ai xem chuỗi phim này cũng đều có cảm xúc hơi buồn, thậm chí là rơi lệ nữa.
+										Bạn đang mong ngóng ngày ra phim để có thể cảm nhận trọn vẹn các tình tiết cũng như sự trở lại của các siêu anh hùng ?, bạn đang muốn xem bộ phim Avengers: Endgame  này thật nhanh nhất ? vậy thì bạn đã đến đúng website phimchill rồi, hãy lưu ngay lại địa chỉ này và share lên facebook để bạn và bạn bè nhận thông báo ngay khi có phim Avengers: Endgame  nhé</p>
+									</div>
+									<div class="btn-banner topdown delay-8">
+										<a href="#" class="btn-mobile btn-tl-mb">
+											<ion-icon name="videocam-sharp"></ion-icon>
+											<span>Trailer</span>
+										</a>
+										<a href="#" class="btn-film btn">
+											<ion-icon name="play-sharp"></ion-icon>
+											<span>Xem phim</span>
+										</a>
+										<div class="btn btn-info" >
+											<ion-icon name="information-outline"></ion-icon>
+											<span>Chi tiết</span>
+										</div>
+										<a href="#" class="btn-mobile btn-info-mb">
+											<ion-icon name="information-outline"></ion-icon>
+											<span>Chi tiết</span>
+										</a>
+									</div>
+									<div class="btn-trailer topdown delay-8">
+										<a href="#">
+											<ion-icon name="play-circle-outline"></ion-icon>
+											<span>Trailer</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="btn-controll">
+						<div class="btn-prev btn-prev-banner">
+							<ion-icon name="chevron-back-outline"></ion-icon>
+						</div>
+						<div class="btn-next btn-next-banner">
+							<ion-icon name="chevron-forward-outline"></ion-icon>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</div>
+		<!----------section film--------->
+		<div class="section-film">
+			<div class="container">
+				<div class="section-film-main">
+					<!---------phim mới cập nhật---------->
+					<div class="film-wrap">
+						<div class="title ">
+							<a href="#">Phim mới cập nhật</a>
+						</div>
+						<div class="film-wrap-content swiper new-update">
+							<div class="film-wrap-list swiper-wrapper">
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/loki_phan_1_loki_season_1.jpg" alt="">
+										<span class="quality info-film-item">HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Loki: Thần lừa lọc</span>
+											<span class="name-es info-film-item">Loki</span>
+											<div class="info-film-count">
+												<span class="view">10 xem</span>
+												<span class="time">Full 6/6</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/thanh-guom-diet-quy.jpg" alt="">
+										<span class="quality info-film-item">Full HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Thanh gươm diệt quỷ: chuyến tàu vô tận</span>
+											<span class="name-es info-film-item">Demon Slayer Movie: Mugen Train</span>
+											<div class="info-film-count">
+												<span class="view">5 xem</span>
+												<span class="time">117 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/boss-baby.jpg" alt="">
+										<span class="quality info-film-item">HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Nhóc trùm</span>
+											<span class="name-es info-film-item">Boss Baby</span>
+											<div class="info-film-count">
+												<span class="view">10 xem</span>
+												<span class="time">107 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/dao-hai-tac-34373-thumbnail.jpg" alt="">
+										<span class="quality info-film-item">HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Đảo hải tặc</span>
+											<span class="name-es info-film-item">One Piece</span>
+											<div class="info-film-count">
+												<span class="view">10 xem</span>
+												<span class="time">Tập 669</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/Free_Guy_2021_Poster.jpg" alt="">
+										<span class="quality info-film-item">HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Giải cứu 'Guy'</span>
+											<span class="name-es info-film-item">Free Guy</span>
+											<div class="info-film-count">
+												<span class="view">15 xem</span>
+												<span class="time">110 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/girl-from-now-here.jpg" alt="">
+										<span class="quality info-film-item">HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Cô gái đến từ hư vô phần 2</span>
+											<span class="name-es info-film-item">Girl from now here season 2</span>
+											<div class="info-film-count">
+												<span class="view">0 xem</span>
+												<span class="time">Full 8/8</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/money-heist.jpg" alt="">
+										<span class="quality info-film-item">VietSub</span>
+										<div class="info-film">
+											<span class="name info-film-item">Phi vụ triệu đô phần 5</span>
+											<span class="name-es info-film-item">Money Heist Season 5</span>
+											<div class="info-film-count">
+												<span class="view">10 xem</span>
+												<span class="time">Tập 5</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/ve-si-sat-thu.jpg" alt="">
+										<span class="quality info-film-item">Phụ đề</span>
+										<div class="info-film">
+											<span class="name info-film-item">Vệ Sĩ Sát Thủ 2: Nhà Có Nóc</span>
+											<span class="name-es info-film-item">Hitman's Wife's Bodyguard</span>
+											<div class="info-film-count">
+												<span class="view">10 xem</span>
+												<span class="time">100 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="btn-controll">
+							<ion-icon name="chevron-back-outline" class="btn-prev btn-prev-new"></ion-icon>
+							<ion-icon name="chevron-forward-outline" class="btn-next btn-next-new"></ion-icon>
+						</div>
+					</div>
+					<!---------phim chiếu rạp---------->
+					<div class="film-wrap">
+						<div class="title ">
+							<a href="#">Phim chiếu rạp</a>
+						</div>
+						<div class="film-wrap-content swiper film-cinema">
+							<div class="film-wrap-list swiper-wrapper">
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/chieurap/conan.jpg" alt="">
+										<span class="quality info-film-item">HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Thám tử lừng danh Conan: Viên đạn đỏ</span>
+											<span class="name-es info-film-item">Detective Conan Movie 24: The Scarlet Bullet</span>
+											<div class="info-film-count">
+												<span class="view">10 xem</span>
+												<span class="time">111 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/chieurap/dune.jpg" alt="">
+										<span class="quality info-film-item">HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Dune: hành tinh cát</span>
+											<span class="name-es info-film-item">Dune</span>
+											<div class="info-film-count">
+												<span class="view">8 xem</span>
+												<span class="time">155 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/chieurap/fast.jpg" alt="">
+										<span class="quality info-film-item">Full HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Quá nhanh quá nguy hiểm 9</span>
+											<span class="name-es info-film-item">fast and furious 9</span>
+											<div class="info-film-count">
+												<span class="view">8 xem</span>
+												<span class="time">145 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/chieurap/shang-chi.jpg" alt="">
+										<span class="quality info-film-item">Full HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Shang chi: Huyền thoại và thập nhẫn</span>
+											<span class="name-es info-film-item">Shang-Chi and the Legend of the Ten Rings</span>
+											<div class="info-film-count">
+												<span class="view">8 xem</span>
+												<span class="time">132 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/chieurap/venom.jpg" alt="">
+										<span class="quality info-film-item">Full HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Venom 2: đối mặt tử thù</span>
+											<span class="name-es info-film-item">Venom: Let There Be Carnage</span>
+											<div class="info-film-count">
+												<span class="view">8 xem</span>
+												<span class="time">129 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/chieurap/Adam-family.jpg" alt="">
+										<span class="quality info-film-item">HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Gia đình Addams 2</span>
+											<span class="name-es info-film-item">Addams Family 2</span>
+											<div class="info-film-count">
+												<span class="view">8 xem</span>
+												<span class="time">93 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="btn-controll">
+							<ion-icon name="chevron-back-outline" class="btn-prev btn-prev-cinema"></ion-icon>
+							<ion-icon name="chevron-forward-outline" class="btn-next btn-next-cinema"></ion-icon>
+						</div>
+					</div>
+					<!---------phim bộ mới---------->
+					<div class="film-wrap">
+						<div class="title ">
+							<a href="#">Phim bộ mới</a>
+						</div>
+						<div class="film-wrap-content swiper film-full">
+							<div class="film-wrap-list swiper-wrapper">
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/chieurap/conan.jpg" alt="">
+										<span class="quality info-film-item">HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Thám tử lừng danh Conan: Viên đạn đỏ</span>
+											<span class="name-es info-film-item">Detective Conan Movie 24: The Scarlet Bullet</span>
+											<div class="info-film-count">
+												<span class="view">10 xem</span>
+												<span class="time">111 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/chieurap/dune.jpg" alt="">
+										<span class="quality info-film-item">HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Dune: hành tinh cát</span>
+											<span class="name-es info-film-item">Dune</span>
+											<div class="info-film-count">
+												<span class="view">8 xem</span>
+												<span class="time">155 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/chieurap/fast.jpg" alt="">
+										<span class="quality info-film-item">Full HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Quá nhanh quá nguy hiểm 9</span>
+											<span class="name-es info-film-item">fast and furious 9</span>
+											<div class="info-film-count">
+												<span class="view">8 xem</span>
+												<span class="time">145 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/chieurap/shang-chi.jpg" alt="">
+										<span class="quality info-film-item">Full HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Shang chi: Huyền thoại và thập nhẫn</span>
+											<span class="name-es info-film-item">Shang-Chi and the Legend of the Ten Rings</span>
+											<div class="info-film-count">
+												<span class="view">8 xem</span>
+												<span class="time">132 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/chieurap/venom.jpg" alt="">
+										<span class="quality info-film-item">Full HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Venom 2: đối mặt tử thù</span>
+											<span class="name-es info-film-item">Venom: Let There Be Carnage</span>
+											<div class="info-film-count">
+												<span class="view">8 xem</span>
+												<span class="time">129 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/chieurap/Adam-family.jpg" alt="">
+										<span class="quality info-film-item">HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Gia đình Addams 2</span>
+											<span class="name-es info-film-item">Addams Family 2</span>
+											<div class="info-film-count">
+												<span class="view">8 xem</span>
+												<span class="time">93 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="btn-controll">
+							<ion-icon name="chevron-back-outline" class="btn-prev btn-prev-full"></ion-icon>
+							<ion-icon name="chevron-forward-outline" class="btn-next btn-next-full"></ion-icon>
+						</div>
+					</div>
+					<!---------phim lẻ mới---------->
+					<div class="film-wrap">
+						<div class="title ">
+							<a href="#">Phim lẻ mới</a>
+						</div>
+						<div class="film-wrap-content swiper film-odd">
+							<div class="film-wrap-list swiper-wrapper">
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/chieurap/conan.jpg" alt="">
+										<span class="quality info-film-item">HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Thám tử lừng danh Conan: Viên đạn đỏ</span>
+											<span class="name-es info-film-item">Detective Conan Movie 24: The Scarlet Bullet</span>
+											<div class="info-film-count">
+												<span class="view">10 xem</span>
+												<span class="time">111 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/chieurap/dune.jpg" alt="">
+										<span class="quality info-film-item">HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Dune: hành tinh cát</span>
+											<span class="name-es info-film-item">Dune</span>
+											<div class="info-film-count">
+												<span class="view">8 xem</span>
+												<span class="time">155 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/chieurap/fast.jpg" alt="">
+										<span class="quality info-film-item">Full HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Quá nhanh quá nguy hiểm 9</span>
+											<span class="name-es info-film-item">fast and furious 9</span>
+											<div class="info-film-count">
+												<span class="view">8 xem</span>
+												<span class="time">145 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/chieurap/shang-chi.jpg" alt="">
+										<span class="quality info-film-item">Full HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Shang chi: Huyền thoại và thập nhẫn</span>
+											<span class="name-es info-film-item">Shang-Chi and the Legend of the Ten Rings</span>
+											<div class="info-film-count">
+												<span class="view">8 xem</span>
+												<span class="time">132 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/chieurap/venom.jpg" alt="">
+										<span class="quality info-film-item">Full HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Venom 2: đối mặt tử thù</span>
+											<span class="name-es info-film-item">Venom: Let There Be Carnage</span>
+											<div class="info-film-count">
+												<span class="view">8 xem</span>
+												<span class="time">129 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/chieurap/Adam-family.jpg" alt="">
+										<span class="quality info-film-item">HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Gia đình Addams 2</span>
+											<span class="name-es info-film-item">Addams Family 2</span>
+											<div class="info-film-count">
+												<span class="view">8 xem</span>
+												<span class="time">93 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="btn-controll">
+							<ion-icon name="chevron-back-outline" class="btn-prev btn-prev-odd"></ion-icon>
+							<ion-icon name="chevron-forward-outline" class="btn-next btn-next-odd"></ion-icon>
+						</div>
+					</div>
+					<!---------Anime---------->
+					<div class="film-wrap">
+						<div class="title ">
+							<a href="#">Anime</a>
+						</div>
+						<div class="film-wrap-content swiper film-anime">
+							<div class="film-wrap-list swiper-wrapper">
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/chieurap/conan.jpg" alt="">
+										<span class="quality info-film-item">HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Thám tử lừng danh Conan: Viên đạn đỏ</span>
+											<span class="name-es info-film-item">Detective Conan Movie 24: The Scarlet Bullet</span>
+											<div class="info-film-count">
+												<span class="view">10 xem</span>
+												<span class="time">111 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/chieurap/dune.jpg" alt="">
+										<span class="quality info-film-item">HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Dune: hành tinh cát</span>
+											<span class="name-es info-film-item">Dune</span>
+											<div class="info-film-count">
+												<span class="view">8 xem</span>
+												<span class="time">155 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/chieurap/fast.jpg" alt="">
+										<span class="quality info-film-item">Full HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Quá nhanh quá nguy hiểm 9</span>
+											<span class="name-es info-film-item">fast and furious 9</span>
+											<div class="info-film-count">
+												<span class="view">8 xem</span>
+												<span class="time">145 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/chieurap/shang-chi.jpg" alt="">
+										<span class="quality info-film-item">Full HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Shang chi: Huyền thoại và thập nhẫn</span>
+											<span class="name-es info-film-item">Shang-Chi and the Legend of the Ten Rings</span>
+											<div class="info-film-count">
+												<span class="view">8 xem</span>
+												<span class="time">132 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/chieurap/venom.jpg" alt="">
+										<span class="quality info-film-item">Full HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Venom 2: đối mặt tử thù</span>
+											<span class="name-es info-film-item">Venom: Let There Be Carnage</span>
+											<div class="info-film-count">
+												<span class="view">8 xem</span>
+												<span class="time">129 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+								<div class="film-wrap-item swiper-slide">
+									<a href="#">
+										<img src="./assets/img/film/chieurap/Adam-family.jpg" alt="">
+										<span class="quality info-film-item">HD</span>
+										<div class="info-film">
+											<span class="name info-film-item">Gia đình Addams 2</span>
+											<span class="name-es info-film-item">Addams Family 2</span>
+											<div class="info-film-count">
+												<span class="view">8 xem</span>
+												<span class="time">93 phút</span>
+											</div>
+										</div>
+										<div class="icon-play">
+											<img src="./assets/img/play.png" alt="" class="icon">
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="btn-controll">
+							<ion-icon name="chevron-back-outline" class="btn-prev btn-prev-anime"></ion-icon>
+							<ion-icon name="chevron-forward-outline" class="btn-next btn-next-anime"></ion-icon>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-----------album film------------>
+		<div class="album-film">
+			<div class="album-film-title">
+				<p class="">Bộ sưu tập</p>
+			</div>
+			<div class="container">
+				<div class="album-film-main">
+					<div class="album-film-list">
+						<div class="album-film-item">
+							<a href="#">
+								<img src="./assets/img/album/bomps.jpg" alt="">
+							</a>
+						</div>
+						<div class="album-film-item">
+							<a href="#">
+								<img src="./assets/img/album/boom.jpg" alt="">
+							</a>
+						</div>
+						<div class="album-film-item">
+							<a href="#">
+								<img src="./assets/img/album/classic.jpg" alt="">
+							</a>
+						</div>
+						<div class="album-film-item">
+							<a href="#">
+								<img src="./assets/img/album/dc.jpg" alt="">
+							</a>
+						</div>
+						<div class="album-film-item">
+							<a href="#">
+								<img src="./assets/img/album/disney.jpg" alt="">
+							</a>
+						</div>
+						<div class="album-film-item">
+							<a href="#">
+								<img src="./assets/img/album/marvel.jpg" alt="">
+							</a>
+						</div>
+						<div class="album-film-item">
+							<a href="#">
+								<img src="./assets/img/album/netflix.jpg" alt="">
+							</a>
+						</div>
+						<div class="album-film-item">
+							<a href="#">
+								<img src="./assets/img/album/oscar.jpg" alt="">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+	<script src="./assets/js/app.js" type="module"></script>
+</body>
+</html>
