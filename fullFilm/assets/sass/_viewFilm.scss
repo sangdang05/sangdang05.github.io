@@ -1,0 +1,147 @@
+:root{
+	--plyr-color-main: #FF6500;
+	--plyr-control-icon-size: 17px;
+	--plyr-control-spacing: 9px;
+	--plyr-control-radius: 3px;
+	--plyr-video-controls-background: transparent;
+	--plyr-video-control-color: #FFF;
+	--plyr-range-track-height: 3px;
+	--plyr-range-fill-background: #7aa6ce;
+	--plyr-video-range-track-background: rgba(255,255,255,0.5);
+	--plyr-tooltip-background: #fff;
+	--plyr-tooltip-color: #000;
+}
+.video-iframe{
+	width: 100%;
+	video{
+		width: 100%;
+		height: 100%;
+	}
+}
+.plyr__video-wrapper{
+	width: 100%;
+	height: 100%;
+}
+.detail-film{
+	padding-top: $header-height + 70px;
+	&-main{
+		.film-content-wrap{
+			@include flexcenter;
+			-webkit-box-align: start;
+			-ms-flex-align: start;
+			align-items: flex-start;
+			.content-left{
+				position: relative;
+				/*background-color: $bg-secondary;*/
+				width: 68%;
+				.info-film{
+					color: $white-color;
+					.info-action{
+						padding: 15px 0 30px 0;
+						@include flexgap;
+						@include gap(18px);
+						font-size: 13px;
+						.action-item{
+							background-color: #252728;
+							padding: 6px 10px;
+							line-height: 1;
+							border-radius: 4px;
+							cursor: pointer;
+							@include flexgap;
+							@include gap(7px);
+							ion-icon{
+								font-size: 15px;
+							}
+							.count{
+								color: $orange-color;
+								padding: 3px;
+								border-radius: inherit;
+								font-weight: 500;
+							}
+						}
+						.action-episode{
+							margin-left: auto;
+						}
+					}
+					.name{
+						font-weight: 600;
+					}
+					.info-tab{
+						@include flexgap;
+						margin-top: 25px;
+						border-bottom: 1px solid $gray-color;
+						.tab-left{
+							@include flexgap;
+							@include gap(50px);
+						}
+						.tab-right{
+							margin-left: auto;
+						}
+						.tab-link{
+							position: relative;
+							padding: 8px 2px;
+							cursor: pointer;
+						}
+						.tab-link.active{
+							&:after{
+								content: "";
+								position: absolute;
+								width: 100%;
+								height: 3px;
+								background-color: $orange-color;
+								bottom: -2px;
+								left: 0;
+							}
+						}
+					}
+					.tab-content-wrap{
+						margin-top: 15px;
+						.tab-content{
+							display: none;
+						}
+						.info{
+							p{
+								margin: 10px 0;
+							}
+							span{
+								font-weight: 500;
+							}
+							a{
+								color: $blue-color;
+								&:after{
+									content: ",";
+									margin: 0 2px;
+									color: $white-color;
+								}
+								&:last-child:after{
+									content: "";
+								}
+								&:hover{
+									color: $orange-color;
+								}
+								&:hover:after{
+									color: $white-color;
+								}
+							}
+						}
+						.episode-content{
+							@include flexgap;
+							@include gap(25px);
+							li{
+								background-color: #252728;
+								padding: 8px 15px;
+								font-size: 13px;
+								border-radius: 5px;
+								margin: 10px 0;
+								cursor: pointer;
+							}
+						}
+					}
+					.tab-content.active {
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,63 @@
+html{
+	scroll-behavior: smooth;
+}
+body{
+	max-width: 1500px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+	line-height: 1.4;
+	letter-spacing: 1.1px;
+	background-color: $bg-color;
+}
+.container{
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.only-mobile{
+	display: none;
+}
+@include maxWidth(1024px){
+	.only-mobile{
+		display: block;
+	}
+}
+.overlay{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+	z-index: 2;
+	display: none;
+}
+.overlay.active{
+	display: block;
+}
+.padding-top{
+	padding-top: $header-height + 20px;
+}
+.icon-close{
+	font-size: 30px;
+	color: $black-color;
+	background-color: $white-color;
+	z-index: 2;
+	width: 100%;
+	ion-icon{
+		margin-top: 0;
+		cursor: pointer;
+	}
+}
+/*------------scroll custom---------------*/
+.scroll{
+	&::-webkit-scrollbar {
+		width: 3px;
+	}
+	&::-webkit-scrollbar-track {
+		background: $black-color;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: $blue-color;
+	}
+}
