@@ -34,7 +34,7 @@ getSong = ()=>{
 	const result = getData();
 	list.innerHTML = "";
 	result.then(data=>{
-		let all = data.songs.top100_VN;
+		let all = data.top100_VN;
 		let nt = all[0].songs;
 		for(let i = 0; i < nt.length; i++){
 			const name = nt[i].title;
