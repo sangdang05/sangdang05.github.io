@@ -1,0 +1,21 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.wrapper{
+    height: 100vh;
+    background: #000;
+    display: flex;
+    align-items: center;
+}
+p{
+    line-height: 2px;
+    word-spacing: -3px;
+    background: url(./2f0bc7bc-7a81-4cf4-b3c0-7b7154d0bd05.jpg) fixed center no-repeat;
+    background-size: contain;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+}
+
